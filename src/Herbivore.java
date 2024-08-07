@@ -2,7 +2,8 @@ public class Herbivore extends Creature{
 
     public Coordinates coordinates;
     public Herbivore(Coordinates coordinates) {
-        this.coordinates = coordinates;
+        super(coordinates);
+
     }
 
     @Override

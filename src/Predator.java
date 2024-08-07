@@ -3,7 +3,7 @@ public class Predator extends Creature {
     int attackForce;
 
     public Predator(Coordinates coordinates) {
-        this.coordinates = coordinates;
+        super(coordinates);
     }
 
     @Override

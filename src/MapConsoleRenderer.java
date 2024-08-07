@@ -12,23 +12,35 @@ public class MapConsoleRenderer {
     private String selectUnicodeSpriteForEntity(Entity entity){
         switch(entity.getClass().getSimpleName()){
             case "Lion":
-                return "\uD80C\uDCEC";
+                return "\uD83E\uDD81";//🦁
 
             case "Hare":
-                return "\uD80C\uDCF9";
+                return "\uD83D\uDC07";//🐇
 
             case "Duck":
-                return "\uD83E\uDD86";
+                return "\uD83E\uDD86";//🦆
 
             case "Crocodile":
-                return "\uD83D\uDC0A";
+                return "\uD83D\uDC0A";//🐊
+
+            case "Zebra":
+                return "\uD83E\uDD93";//🦓
+
+            case "Peacock":
+                return "\uD83E\uDD9A";//🦚
 
             case "Mountain":
-                return "♛";
+                return "⛰";//⛰
 
             case "Grass":
-                return "♚";
+                return "\uD83C\uDF31";//🌱
+
+            case "Tree":
+                return "\uD83C\uDF33";//🌳
+
+
         }
-        return  "";
+
+        return null;
     }
 }
