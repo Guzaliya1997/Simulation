@@ -1,6 +1,9 @@
+package simulation;
+
+import simulation.Coordinates;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class MapUtils {
     public static List<Coordinates> getDiagonalCoordinatesBetween(Coordinates source, Coordinates target) {
@@ -35,5 +38,11 @@ public class MapUtils {
             result.add(new Coordinates(file,source.rank));
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        List<Coordinates> list =
+                getHorizontalCoordinatesBetween(new Coordinates(6,4), new Coordinates(6,4));
+        System.out.println(list);
     }
 }

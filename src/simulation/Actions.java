@@ -1,3 +1,5 @@
+package simulation;
+
 public class Actions {
     public void initAction(){//действия, совершаемые перед стартом симуляции.
         // Пример - расставить объекты и существ на карте

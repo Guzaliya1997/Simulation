@@ -1,3 +1,5 @@
+package simulation;
+
 public class CoordinatesShift {
     public final int  fileShift;
     public final int rankShift;

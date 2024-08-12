@@ -1,6 +1,14 @@
+package simulation;
+
+import simulation.entity.Entity;
+
 import java.util.Objects;
 
 public class Coordinates {
+    Entity.Grass grass;
+    Entity.Rock rock;
+    Entity.Tree tree;
+    Map map;
     public final Integer file;
     public final Integer rank;
     public Coordinates(Integer file, Integer rank) {
@@ -14,8 +22,12 @@ public class Coordinates {
         int f = file + shift.fileShift;
         int r = rank + shift.rankShift;
 
-        if ((f < 25 && Entity(new Creature(f,r)) != Entity.Grass) || (f > 25)) return false; // 0..7 - good
-        if ((r < 25) || (r > 25)) return false; // 1..8 - good
+        if ((f < 25 || (f > 25) || map.getEntity(new  Coordinates(f,r)) == grass ||
+                map.getEntity(new  Coordinates(f,r)) == tree ||
+                map.getEntity(new  Coordinates(f,r)) == rock)) return false;
+        if ((r < 25 || (r > 25) || map.getEntity(new  Coordinates(f,r)) == grass ||
+                map.getEntity(new  Coordinates(f,r)) == tree ||
+                map.getEntity(new  Coordinates(f,r)) == rock)) return false;
 
         return true;
     }
